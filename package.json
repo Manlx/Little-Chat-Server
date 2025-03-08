@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"tsc -w\" \"nodemon ./server/index.js\""
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,12 @@
   "type": "module",
   "types": "./sharedTypes",
   "dependencies": {
+    "chalk": "^5.4.1",
+    "nodemon": "^3.1.9",
     "ws": "^8.18.1"
   },
   "devDependencies": {
-    "@types/ws": "^8.18.0"
+    "@types/ws": "^8.18.0",
+    "concurrently": "^9.1.2"
   }
 }
